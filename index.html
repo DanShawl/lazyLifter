@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Lazy Lifter</title>
+</head>
+<body>
+  <nav>
+    <a href="/index.html">
+      <i class="fas fa-home"></i>
+    </a>
+  </nav>
+  <section class="title-bar">
+    <a href="/index.html"><h1 class="lazy">lazy</h1> </a>
+    <a href="/index.html"><h1 class="lifter">Lifter</h1> </a>
+  </section>
+  <header>
+    <h1 class="header-title">What are you <br> focusing on today?</h1>
+    <p class="mobile-rec">I recommend using your phone to work out on the go.</p>
+    <!-- <p>Choose a category.</p> -->
+    <div class="focus-box-group">
+      <div class="focus-box fb" id="fb">
+        <img src="./icons/icons8-deadlift-50.png" alt="">
+        <h4>Full Body</h4>
+        <!-- <p>A little bit of everything.</p> -->
+      </div>
+      <div class="focus-box ub" id="ub">
+        <img src="/icons/icons8-curls-with-dumbbells-50.png" alt="">
+        <h4>Upper Body</h4>
+        <!-- <p>A focus on your chest, back, shoulders and arms.</p> -->
+      </div>
+      <div class="focus-box lb" id="lb">
+        <img src="/icons/icons8-squats-50.png" alt="">
+        <h4>Lower Body</h4>
+        <!-- <p>A focus on your legs and butt.</p> -->
+      </div>
+      <div class="focus-box push" id="push">
+        <img src="/icons/icons8-pushups-50.png" alt="">
+        <h4>Push</h4>
+        <!-- <p>Includes chest, shoulders, and triceps.</p> -->
+      </div>
+      <div class="focus-box pull" id="pull">
+        <img src="/icons/icons8-pullups-50.png" alt="">
+        <h4>Pull</h4>
+        <!-- <p>Includes your back and biceps. </p> -->
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="workout-page hidden">
+      <!-- <h2>Some exercises to try</h2> -->
+      <div class="workout-page-container">
+        <div class="workouts-div">
+          <h2>Workouts created for you</h2>
+          <div class="workouts">
+            
+            <!-- <div class="workout-card">
+              <div class="overlay"></div>
+              <h4 class="wc-focus">Full Body</h4>
+              <div class="wc-info">
+                <p class="wc-intensity">Heavy</p>
+              <p id="wc-date"></p>
+            </div> -->
+              
+          </div>
+        </div> 
+        <div class="exercises-to-try-div">
+          <h2>Exercises you should try</h2>
+          <div class="exercises-to-try">
+              <!-- <div class="ett-item">
+                <h4 class="ett-number">1</h4>
+                <p class="ett-name">Back Squat</p>
+              </div> -->
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="your-workout-page hidden">
+      <div class="your-workout-stats">
+        <div class="your-workout-box set-box">
+          <!-- <h4>Total Sets</h4> -->
+          </div>
+        </div>
+        <div class="your-workout">
+          <h2 class="workout-title">Your Workout</h2>
+            
+        </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

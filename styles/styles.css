@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h4 {
+  color: #2b2b2b;
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  color: #636363;
+  font-family: "Varela Round", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* *************** Top Bar Mobile *************** */
+.title-bar {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  z-index: 500;
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.title-bar .lazy {
+  font-weight: 100;
+}
+
+.title-bar .lifter {
+  margin: 0;
+}
+
+/* *************** Home Page Mobile *************** */
+header {
+  margin: 5em 1em;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+}
+
+header h1 {
+  margin-left: 0.25em;
+  margin-bottom: 1em;
+}
+
+header .mobile-rec {
+  display: none;
+}
+
+header .focus-box-group {
+  margin: 0 0.25em;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (150px)[3];
+      grid-template-rows: repeat(3, 150px);
+      grid-template-areas: 'fb ub' 'lb push' 'pull .';
+}
+
+header .focus-box {
+  background-color: #ececec;
+  border-radius: 10px;
+  padding: 1em;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+header .focus-box h4 {
+  font-size: 1.15rem;
+  margin-top: 1em;
+}
+
+header .focus-box p {
+  font-size: 0.9rem;
+}
+
+header .fb {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: fb;
+}
+
+header .ub {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: ub;
+}
+
+header .lb {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: lb;
+}
+
+header .push {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: push;
+}
+
+header .pull {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: pull;
+}
+
+header .focus-box:focus,
+header .focus-box:hover {
+  background-color: #a7a7a7;
+}
+
+/* *************** Workout Options Page Mobile *************** */
+.workout-page {
+  margin: 5em 1em 2em 1em;
+}
+
+.workout-page h2 {
+  margin-bottom: 0.75em;
+  font-size: 1.25rem;
+}
+
+.workout-page .workouts {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (200px)[2];
+      grid-template-rows: repeat(2, 200px);
+  margin-bottom: 2em;
+}
+
+.workout-page .workout-card {
+  cursor: pointer;
+  position: relative;
+  padding: 1em;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.workout-page .workout-card h4 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 0.25em;
+}
+
+.workout-page .workout-card p {
+  color: #dbdbdb;
+}
+
+.workout-page .workout-card h4,
+.workout-page .workout-card p {
+  z-index: 100;
+}
+
+.workout-page .workout-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.workout-page .workout-card .wc-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.workout-page .wc-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.workout-page .fb-heavy-class {
+  background-image: url(/LazyLifter-Images/full1.jpg);
+  background-position: bottom;
+}
+
+.workout-page .fb-light-class {
+  background-image: url(/LazyLifter-Images/full2.jpg);
+  background-position: top;
+}
+
+.workout-page .ub-heavy-class {
+  background-image: url(/LazyLifter-Images/upper4.jpg);
+}
+
+.workout-page .ub-light-class {
+  background-image: url(/LazyLifter-Images/upper2.jpg);
+}
+
+.workout-page .lb-heavy-class {
+  background-image: url(/LazyLifter-Images/legs2.jpg);
+}
+
+.workout-page .lb-light-class {
+  background-image: url(/LazyLifter-Images/legs3.jpg);
+}
+
+.workout-page .push-heavy-class {
+  background-image: url(/LazyLifter-Images/push1.jpg);
+}
+
+.workout-page .push-light-class {
+  background-image: url(/LazyLifter-Images/push3.jpg);
+}
+
+.workout-page .pull-heavy-class {
+  background-image: url(/LazyLifter-Images/pull1.jpg);
+}
+
+.workout-page .pull-light-class {
+  background-image: url(/LazyLifter-Images/pull2.jpg);
+}
+
+.workout-page .exercises-to-try .ett-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 0.7em;
+}
+
+.workout-page .exercises-to-try .ett-item h4 {
+  padding: 0.65em 1em;
+  background-color: #ececec;
+  margin-right: 1.5em;
+}
+
+/* *************** Workout Exercises Page Mobile *************** */
+.your-workout-page .workout-title {
+  margin: 3em 0 0.5em 0.75em;
+}
+
+.your-workout-page .exercise-card {
+  padding: 1em 1.25em;
+  border-bottom: 1px solid #ececec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.your-workout-page .exercise-card .exercise-name {
+  margin-bottom: 0.25em;
+}
+
+.your-workout-page .exercise-card .exercise-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #ececec;
+  margin-right: 1.5em;
+  border-radius: 5px;
+}
+
+.your-workout-page .exercise-card .exercise-sets-reps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5em;
+}
+
+/* *************** Hidden Class for Single Page *************** */
+.hidden {
+  display: none;
+}
+
+/* *************** Nav Styles Mobile *************** */
+nav {
+  position: fixed;
+  bottom: 2em;
+  right: 1em;
+}
+
+nav a {
+  padding: 1em;
+  border-radius: 10px;
+  background-color: #ececec;
+  color: #2b2b2b;
+  font-size: 1.25rem;
+}
+
+nav a:hover {
+  background-color: #a7a7a7;
+}
+
+/* *************** Desktop 1024px Styles *************** */
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 22px;
+  }
+  /* ******* Home Page ******* */
+  header {
+    margin: 0 1em;
+    height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  header h1 {
+    margin-bottom: 0.25em;
+  }
+  header .mobile-rec {
+    display: initial;
+    margin-bottom: 2em;
+    font-size: 0.9rem;
+  }
+  header .focus-box-group {
+    -ms-grid-columns: (200px)[5];
+        grid-template-columns: repeat(5, 200px);
+    -ms-grid-rows: 200px;
+        grid-template-rows: 200px;
+        grid-template-areas: 'fb ub lb push pull';
+  }
+  header .fb {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: fb;
+  }
+  header .ub {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: ub;
+  }
+  header .lb {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: lb;
+  }
+  header .push {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+    grid-area: push;
+  }
+  header .pull {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+    grid-area: pull;
+  }
+  /* ******* Workout Options Page ******* */
+  .workout-page {
+    margin-top: 5em;
+    margin-bottom: 0;
+  }
+  .workout-page-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 5em;
+  }
+  .workout-page-container .workouts-div {
+    width: 600px;
+  }
+  .workout-page-container .workouts {
+    -ms-grid-rows: (230px)[2];
+        grid-template-rows: repeat(2, 230px);
+  }
+  .workout-page-container .workouts .workout-card h4 {
+    margin-bottom: 0;
+  }
+  .workout-page-container .workout-card:hover .overlay {
+    opacity: 1;
+  }
+  /* ******* Workout Exercises Page ******* */
+  .your-workout-page {
+    width: 30%;
+    margin: 0 auto 5em;
+    border: 1px solid #c9c9c9;
+  }
+  .your-workout-page .workout-title {
+    margin: 3em 0 0.5em 0.75em;
+  }
+  .your-workout-page .exercise-card {
+    padding: 1em 1.25em;
+    border-bottom: 1px solid #ececec;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .your-workout-page .exercise-card .exercise-name {
+    margin-bottom: 0.25em;
+  }
+  .your-workout-page .exercise-card .exercise-num {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #ececec;
+    margin-right: 1.5em;
+    border-radius: 5px;
+  }
+  .your-workout-page .exercise-card .exercise-sets-reps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5em;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

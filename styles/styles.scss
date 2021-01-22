@@ -1,0 +1,395 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+$textColorPrimary: rgb(43, 43, 43);
+$textColorSecondary: rgb(99, 99, 99);
+// $fontPrimary: 'Balsamiq Sans', cursive;
+$fontPrimary: 'Ubuntu', sans-serif;
+$fontSecondary: 'Varela Round', sans-serif;
+
+h1,
+h2,
+h4 {
+  color: $textColorPrimary;
+  font-family: $fontPrimary;
+}
+p {
+  color: $textColorSecondary;
+  font-family: $fontSecondary;
+}
+a {
+  text-decoration: none;
+}
+
+/* *************** Top Bar Mobile *************** */
+.title-bar {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  z-index: 500;
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #c9c9c9;
+  .lazy {
+    font-weight: 100;
+  }
+  .lifter {
+    margin: 0;
+  }
+}
+
+/* *************** Home Page Mobile *************** */
+header {
+  margin: 5em 1em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  h1 {
+    margin-left: 0.25em;
+    margin-bottom: 1em;
+  }
+  .mobile-rec {
+    display: none;
+  }
+  .focus-box-group {
+    margin: 0 0.25em;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 150px);
+    grid-template-areas:
+      'fb ub'
+      'lb push'
+      'pull .';
+  }
+  .focus-box {
+    // height: 100px;
+    // width: 125px;
+    // border: 1px solid $textColorSecondary;
+    background-color: #ececec;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    h4 {
+      font-size: 1.15rem;
+      margin-top: 1em;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  .fb {
+    grid-area: fb;
+  }
+  .ub {
+    grid-area: ub;
+  }
+  .lb {
+    grid-area: lb;
+  }
+  .push {
+    grid-area: push;
+  }
+  .pull {
+    grid-area: pull;
+  }
+  .focus-box:focus,
+  .focus-box:hover {
+    background-color: rgb(167, 167, 167);
+  }
+}
+
+/* *************** Workout Options Page Mobile *************** */
+.workout-page {
+  margin: 5em 1em 2em 1em;
+  h2 {
+    margin-bottom: 0.75em;
+    font-size: 1.25rem;
+  }
+  .workouts {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 200px);
+    margin-bottom: 2em;
+  }
+  .workout-card {
+    cursor: pointer;
+    position: relative;
+    padding: 1em;
+    // border: 1px solid $textColorSecondary;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    h4 {
+      color: white;
+      font-size: 1.6rem;
+      // letter-spacing: 0.1rem;
+      margin-bottom: 0.25em;
+    }
+    p {
+      color: rgb(219, 219, 219);
+    }
+    h4,
+    p {
+      z-index: 100;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.7;
+      background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+      height: 100%;
+      width: 100%;
+      border-radius: 5px;
+    }
+    .wc-info {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .wc-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .fb-heavy-class {
+    background-image: url(/LazyLifter-Images/full1.jpg);
+    background-position: bottom;
+  }
+  .fb-light-class {
+    background-image: url(/LazyLifter-Images/full2.jpg);
+    background-position: top;
+  }
+  .ub-heavy-class {
+    background-image: url(/LazyLifter-Images/upper4.jpg);
+  }
+  .ub-light-class {
+    background-image: url(/LazyLifter-Images/upper2.jpg);
+  }
+  .lb-heavy-class {
+    background-image: url(/LazyLifter-Images/legs2.jpg);
+  }
+  .lb-light-class {
+    background-image: url(/LazyLifter-Images/legs3.jpg);
+  }
+  .push-heavy-class {
+    background-image: url(/LazyLifter-Images/push1.jpg);
+  }
+  .push-light-class {
+    background-image: url(/LazyLifter-Images/push3.jpg);
+  }
+  .pull-heavy-class {
+    background-image: url(/LazyLifter-Images/pull1.jpg);
+  }
+  .pull-light-class {
+    background-image: url(/LazyLifter-Images/pull2.jpg);
+  }
+
+  .exercises-to-try {
+    .ett-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.7em;
+      h4 {
+        padding: 0.65em 1em;
+        background-color: #ececec;
+        margin-right: 1.5em;
+      }
+    }
+  }
+}
+
+/* *************** Workout Exercises Page Mobile *************** */
+.your-workout-page {
+  // margin: 1em;
+  .workout-title {
+    margin: 3em 0 0.5em 0.75em;
+  }
+  .exercise-card {
+    padding: 1em 1.25em;
+    // margin: 0.7em 0;
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    align-items: center;
+    // gap: 1.5em;
+    .exercise-name {
+      margin-bottom: 0.25em;
+    }
+    .exercise-num {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      background-color: #ececec;
+      margin-right: 1.5em;
+      border-radius: 5px;
+    }
+    .exercise-sets-reps {
+      display: flex;
+      gap: 1.5em;
+    }
+  }
+}
+
+/* *************** Hidden Class for Single Page *************** */
+.hidden {
+  display: none;
+}
+
+/* *************** Nav Styles Mobile *************** */
+nav {
+  position: fixed;
+  bottom: 2em;
+  right: 1em;
+  // padding: 1em;
+  a {
+    padding: 1em;
+    border-radius: 10px;
+    background-color: #ececec;
+    // width: 60px;
+    // height: 60px;
+    color: $textColorPrimary;
+    font-size: 1.25rem;
+  }
+}
+nav a:hover {
+  background-color: rgb(167, 167, 167);
+}
+
+/* *************** Desktop 1024px Styles *************** */
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 22px;
+  }
+
+  /* ******* Home Page ******* */
+  header {
+    // background-image: url(/LazyLifter-Images/john-arano-h4i9G-de7Po-unsplash.jpg);
+    // border: 1px solid forestgreen;
+    margin: 0 1em;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+      margin-bottom: 0.25em;
+    }
+    .mobile-rec {
+      display: initial;
+      margin-bottom: 2em;
+      font-size: 0.9rem;
+    }
+    .focus-box-group {
+      grid-template-columns: repeat(5, 200px);
+      grid-template-rows: 200px;
+      grid-template-areas: 'fb ub lb push pull';
+    }
+    .fb {
+      grid-area: fb;
+    }
+    .ub {
+      grid-area: ub;
+    }
+    .lb {
+      grid-area: lb;
+    }
+    .push {
+      grid-area: push;
+    }
+    .pull {
+      grid-area: pull;
+    }
+  }
+  /* ******* Workout Options Page ******* */
+  .workout-page {
+    // height: 100vh;
+    margin-top: 5em;
+    margin-bottom: 0;
+  }
+  .workout-page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5em;
+    .workouts-div {
+      width: 600px;
+    }
+    .workouts {
+      grid-template-rows: repeat(2, 230px);
+      .workout-card {
+        h4 {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .workout-card:hover {
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  /* ******* Workout Exercises Page ******* */
+  .your-workout-page {
+    width: 30%;
+    margin: 0 auto 5em;
+    border: 1px solid #c9c9c9;
+
+    .workout-title {
+      margin: 3em 0 0.5em 0.75em;
+    }
+    .exercise-card {
+      padding: 1em 1.25em;
+      // margin: 0.7em 0;
+      border-bottom: 1px solid #ececec;
+      display: flex;
+      align-items: center;
+      // gap: 1.5em;
+      .exercise-name {
+        margin-bottom: 0.25em;
+      }
+      .exercise-num {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        background-color: #ececec;
+        margin-right: 1.5em;
+        border-radius: 5px;
+      }
+      .exercise-sets-reps {
+        display: flex;
+        gap: 1.5em;
+      }
+    }
+  }
+}
