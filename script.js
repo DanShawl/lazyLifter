@@ -54,7 +54,7 @@ let chestExercises = [
   'Incline Dumbbell Bench Press',
   'Chest Press Machine',
   'Cable Crossover',
-  'Low-Cable Crossover',
+  'Low Cable Crossover',
   'Dumbbell Fly',
   'Incline Dumbbell Fly',
   'Landmine Press',

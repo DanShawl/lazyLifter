@@ -97,6 +97,8 @@ header .focus-box-group {
 }
 
 header .focus-box {
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
   background-color: #ececec;
   border-radius: 10px;
   padding: 1em;
@@ -218,6 +220,8 @@ header .focus-box:hover {
 }
 
 .workout-page .workout-card .overlay {
+  -webkit-transition: opacity 250ms ease;
+  transition: opacity 250ms ease;
   position: absolute;
   top: 0;
   left: 0;
@@ -237,6 +241,10 @@ header .focus-box:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.workout-page .workout-card:hover .overlay {
+  opacity: 1;
 }
 
 .workout-page .wc-img {
